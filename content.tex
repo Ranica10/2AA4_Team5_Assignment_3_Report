@@ -1,5 +1,7 @@
 \section{Executive summary}
 
+Assignment 3 was based on improving our Catan simulator code by adding three design patterns that would make it more efficient and functional. The first design pattern used in this assignment was the Command Pattern for implementing the undo and redo feature in Catan. With this feature, users can now reverse and redo their moves in the game. We added commands for road, settlement, and city construction, as well as a Command Manager for managing commands. The second design pattern used in this assignment was the Observer Pattern for implementing automatic notification of dice rolling for each player. With this feature, users do not have to manually distribute resources after rolling the dice. The third design pattern used in this assignment was not implemented; it was based on using the Strategy Pattern for separating player decision-making logic from the Player class. With this feature, users can easily switch from human, random AI, and rule-based AI. The machine intelligence for this feature is based on a value system, where actions that give victory points are given the highest priority, followed by non-victory point buildings, and finally constraints such as spending cards if a player has more than seven cards. Overall, the assignment demonstrated how design patterns can significantly improve software architecture by promoting loose coupling, single responsibility, and open/closed principles.
+
 \section{Requirements traceability}
 
     \begin{longtable}{|p{0.80cm}|p{2.3cm}|p{5.1cm}|p{8cm}|}
