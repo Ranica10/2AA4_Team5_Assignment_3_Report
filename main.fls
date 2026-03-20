@@ -1,7 +1,7 @@
-PWD /Users/radhika/Desktop/2AA4_Team5_Assignment_3_Report
+PWD /Users/ranica/Desktop/McMaster/Year 2/Semester 2/SFWRENG 2AA4/Assignments/2AA4_Team5_Assignment_3_Report
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/web2c/texmf.cnf
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/radhika/Desktop/2AA4_Team5_Assignment_3_Report/main.tex
+INPUT /Users/ranica/Desktop/McMaster/Year 2/Semester 2/SFWRENG 2AA4/Assignments/2AA4_Team5_Assignment_3_Report/main.tex
 OUTPUT main.log
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/article.cls
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/article.cls

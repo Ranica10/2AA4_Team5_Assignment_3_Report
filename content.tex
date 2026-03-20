@@ -12,7 +12,7 @@
     
     R3.1 & Implemented & \code{BuildCityCommand.java}, \code{BuildRoadCommand.java}, \code{BuildSettlementComman-\newline -d.java}, \newline \code{Command.java}, \code{CommandManager.java} & Implement an undo/redo functionality \\
     \hline
-    R3.2 & Implemented & \code{AIAction.java}, \code{ConstraintChecker.java},
+    R3.2 & Implemented & \code{AIAction.java},
     \code{ConstraintChecker.java},
     \code{ActionEvalutor.java},
     \code{RuleBasedAI.java},
@@ -25,7 +25,7 @@
 \end{itemize} 
 \\
     \hline
-    R3.3 & Implemented & \code{AIAction.java}, \code{ConstraintChecker.java},
+    R3.3 & Implemented & \code{AIAction.java},
     \code{ConstraintChecker.java},
     \code{ActionEvalutor.java},
     \code{RuleBasedAI.java},
@@ -64,7 +64,24 @@ Instead of calling methods like buildSettlement() in TurnManager, we made these 
 \textbf{Explain the design pattern and elaborate on how it fosters cleaner design in this
 particular software.}
 
+The Command Pattern is a design pattern where each action in the program is represented as an object.
+
+\begin{itemize}
+\item \textbf{Command:} Command interface with execute(), undo(), and redo() functions
+\item \textbf{Command Classes:} BuildRoadCommand, BuildSettlementCommand, and BuildCityCommand
+\item \textbf{Invoker:} CommandManager - stores and manages the command history
+\item \textbf{Receiver:} HumanPlayer - calls the undo/redo action on the respective command
+\end{itemize}
+
+This helped make the design much cleaner because it separates what action is being done from how the system manages those actions over time. For example, building a road or upgrading a city is handled inside its own class, and the TurnManager class which uses the undo/redo system doesn’t need to know how those actions work internally, but rather it just calls undo() or redo() on the command. This avoids having large, messy logic inside those classes, which also makes the code more organized and easier to extend. If we want to add a new type of action in the future, we can just create a new command class instead of modifying a lot of the existing code. This follows good design principles like keeping classes focused on one responsibility and making the system easier to maintain.\\\\
+Overall, the Command Pattern works really well for undo/redo because it naturally allows us to store actions and reverse them, and makes the implementation more aligned with the behavior we wanted from the system.
+
+
 \textbf{How much did you need to think about the structure of the evolved program once you have figured out which design pattern to use?}
+
+Once we figured out that the Command pattern was the right fit, we did not need to completely rethink the whole structure of the evolved program, but we still had to think carefully about where each responsibility should go. We knew we needed a command interface, command classes for each action, and the turn manager to call all the undo/redo operations. So in that sense, the design pattern made the structure easier to organize because it gave us a clear template to follow. Instead of putting all the logic inside one large controller or game class, we could break the system into smaller pieces with specific roles.\\\\
+However, we still had to think about some details regarding the structure of the program. We still had to think carefully about which actions should be turned into commands, what data each command needed to store in order to undo correctly, and how the manager should track the current command position. This was due to the fact that some commands require remembering previous values or board states so that undo can accurately restore the system which required careful planning. For example, in BuildRoadCommand, we had to decide that the command should store the Board, Player, and the two node IDs. Without that information, the command would not be able to properly execute, undo, or redo the road-building action.\\\\
+Overall, once we identified the pattern, the structure of the program became much clearer and allowed us not having to figure everything out from scratch, but rather focus on smaller details, such as what each command should store for their undo/redo functions. So the pattern made things simpler by removing a lot of complexity, but we still needed to plan the design carefully to properly execute the pattern.\\
 
 \textbf{How much change was needed in the design and in the implementation?}
 
