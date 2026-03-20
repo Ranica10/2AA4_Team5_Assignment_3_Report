@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 MAR 2026 13:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 MAR 2026 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/radhika/Desktop/2AA4_Team5_Assignment_3_Report/main.tex
-(/Users/radhika/Desktop/2AA4_Team5_Assignment_3_Report/main.tex
+**"/Users/ranica/Desktop/McMaster/Year 2/Semester 2/SFWRENG 2AA4/Assignments/2AA4_Team5_Assignment_3_Report/main.tex"
+(/Users/ranica/Desktop/McMaster/Year 2/Semester 2/SFWRENG 2AA4/Assignments/2AA4_Team5_Assignment_3_Report/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/article.cls
@@ -1398,43 +1398,18 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [1
 
 {/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]) (./content.tex
-Overfull \hbox (0.59271pt too wide) in paragraph at lines 8--8
+Overfull \hbox (0.59271pt too wide) in paragraph at lines 10--10
 []|\T1/lmr/bx/n/12 Req
  []
 
 
-Overfull \hbox (38.9037pt too wide) in alignment at lines 5--10
+Overfull \hbox (38.9037pt too wide) in alignment at lines 7--12
  [] [] [] [] 
  []
 
 
-Overfull \hbox (0.89868pt too wide) in paragraph at lines 13--13
-[]|\T1/lmr/m/n/12 R3.1| 
- []
-
-
-Overfull \hbox (1.13841pt too wide) in paragraph at lines 13--13
-[]|\T1/lmr/m/n/12 Implemented| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
-[]|\T1/lmtt/m/n/12 BuildCityCommand.java\T1/lmr/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
-\T1/lmtt/m/n/12 BuildRoadCommand.java\T1/lmr/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
-\T1/lmtt/m/n/12 Command.java\T1/lmr/m/n/12 ,
- []
-
-
 Overfull \hbox (0.89868pt too wide) in paragraph at lines 15--15
-[]|\T1/lmr/m/n/12 R3.2| 
+[]|\T1/lmr/m/n/12 R3.1| 
  []
 
 
@@ -1443,60 +1418,85 @@ Overfull \hbox (1.13841pt too wide) in paragraph at lines 15--15
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--20
-[]|\T1/lmtt/m/n/12 AIAction.java\T1/lmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]|\T1/lmtt/m/n/12 BuildCityCommand.java\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--20
-\T1/lmtt/m/n/12 ConstraintChecker.java\T1/lmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+\T1/lmtt/m/n/12 BuildRoadCommand.java\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--20
-\T1/lmtt/m/n/12 ActionEvalutor.java\T1/lmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+\T1/lmtt/m/n/12 Command.java\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--20
-\T1/lmtt/m/n/12 RuleBasedAI.java\T1/lmr/m/n/12 ,
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 22.
-(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Overfull \hbox (0.89868pt too wide) in paragraph at lines 28--28
-[]|\T1/lmr/m/n/12 R3.3| 
+Overfull \hbox (0.89868pt too wide) in paragraph at lines 17--17
+[]|\T1/lmr/m/n/12 R3.2| 
  []
 
 
-Overfull \hbox (1.13841pt too wide) in paragraph at lines 28--28
+Overfull \hbox (1.13841pt too wide) in paragraph at lines 17--17
 []|\T1/lmr/m/n/12 Implemented| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
 []|\T1/lmtt/m/n/12 AIAction.java\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
 \T1/lmtt/m/n/12 ConstraintChecker.java\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
 \T1/lmtt/m/n/12 ActionEvalutor.java\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+\T1/lmtt/m/n/12 RuleBasedAI.java\T1/lmr/m/n/12 ,
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 24.
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (0.89868pt too wide) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/12 R3.3| 
+ []
+
+
+Overfull \hbox (1.13841pt too wide) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/12 Implemented| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
+[]|\T1/lmtt/m/n/12 AIAction.java\T1/lmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
+\T1/lmtt/m/n/12 ConstraintChecker.java\T1/lmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
+\T1/lmtt/m/n/12 ActionEvalutor.java\T1/lmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
 \T1/lmtt/m/n/12 RuleBasedAI.java\T1/lmr/m/n/12 ,
  []
 
 
-Overfull \hbox (38.9037pt too wide) in alignment at lines 10--40
+Overfull \hbox (38.9037pt too wide) in alignment at lines 12--42
  [] [] [] [] 
  []
 
@@ -1504,80 +1504,84 @@ Overfull \hbox (38.9037pt too wide) in alignment at lines 10--40
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 \end{longtable}
-                     [1{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-<uml.png, id=56, 1727.45375pt x 788.9475pt>
+l.42 \end{longtable}
+                     [1]
+<uml.png, id=55, 1727.45375pt x 788.9475pt>
 File: uml.png Graphic file (type png)
 <use uml.png>
-Package pdftex.def Info: uml.png  used on input line 49.
+Package pdftex.def Info: uml.png  used on input line 51.
 (pdftex.def)             Requested size: 424.82523pt x 194.02214pt.
 
 
-[2 <./uml.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[2{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--78
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
 
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
+[3 <./uml.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
 
 
 [4]
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
+
+ []
+
+
 
 [5]
-Overfull \hbox (17.18456pt too wide) in paragraph at lines 164--165
+Overfull \hbox (17.18456pt too wide) in paragraph at lines 166--167
 []\T1/lmr/m/n/12 MultiDice: added ex-tend-ing DiceRoll-Sub-ject, and in roll method no-ti-fy-Ob-server(sum)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
-
  []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
@@ -1598,14 +1602,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  39104 strings out of 473190
- 720631 string characters out of 5704335
- 1505647 words of memory out of 5000000
+ 720786 string characters out of 5704335
+ 1506647 words of memory out of 5000000
  61708 multiletter control sequences out of 15000+600000
  612354 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 137i,11n,143p,1235b,1787s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,11n,143p,1571b,1787s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (9 pages, 638980 bytes).
+Output written on main.pdf (9 pages, 640788 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream

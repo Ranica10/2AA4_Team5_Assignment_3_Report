@@ -72,7 +72,7 @@ The Command Pattern is a design pattern where each action in the program is repr
 \item \textbf{Command:} Command interface with execute(), undo(), and redo() functions
 \item \textbf{Command Classes:} BuildRoadCommand, BuildSettlementCommand, and BuildCityCommand
 \item \textbf{Invoker:} CommandManager - stores and manages the command history
-\item \textbf{Receiver:} HumanPlayer - calls the undo/redo action on the respective command
+\item \textbf{Receiver:} TurnManager - calls the undo/redo action on the respective command
 \end{itemize}
 
 This helped make the design much cleaner because it separates what action is being done from how the system manages those actions over time. For example, building a road or upgrading a city is handled inside its own class, and the TurnManager class which uses the undo/redo system doesn’t need to know how those actions work internally, but rather it just calls undo() or redo() on the command. This avoids having large, messy logic inside those classes, which also makes the code more organized and easier to extend. If we want to add a new type of action in the future, we can just create a new command class instead of modifying a lot of the existing code. This follows good design principles like keeping classes focused on one responsibility and making the system easier to maintain.\\\\
