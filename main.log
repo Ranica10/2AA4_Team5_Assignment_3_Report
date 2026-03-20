@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 MAR 2026 13:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 MAR 2026 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/ranica/Desktop/McMaster/Year 2/Semester 2/SFWRENG 2AA4/Assignments/2AA4_Team5_Assignment_3_Report/main.tex"
-(/Users/ranica/Desktop/McMaster/Year 2/Semester 2/SFWRENG 2AA4/Assignments/2AA4_Team5_Assignment_3_Report/main.tex
+**/Users/radhika/Desktop/2AA4_Team5_Assignment_3_Report/main.tex
+(/Users/radhika/Desktop/2AA4_Team5_Assignment_3_Report/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/article.cls
@@ -1598,14 +1598,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  39104 strings out of 473190
- 720786 string characters out of 5704335
+ 720631 string characters out of 5704335
  1505647 words of memory out of 5000000
  61708 multiletter control sequences out of 15000+600000
  612354 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 137i,11n,143p,1288b,1787s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,11n,143p,1235b,1787s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (9 pages, 638826 bytes).
+Output written on main.pdf (9 pages, 638980 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
