@@ -171,6 +171,13 @@ Moderate changes were required:
 
 \textbf{Which design pattern did you choose and why?}
 
+We chose the Strategy Pattern to handle how different players decide their actions during a turn. In our original design, we had separate classes like HumanPlayer and ComputerPlayer, which meant the behavior for choosing actions was tied directly to the player type, which made the design less flexible and harder to extend.
+
+By using the Strategy Pattern, we moved the decision-making logic into separate strategy classes, such as HumanTurnStrategy, RandomTurnStrategy, and RuleBasedStrategy. By using this design, each player now can use a strategy object that determines how they choose their next command. This allows us to easily switch or add new behaviors without changing the Player class.
+
+We chose this pattern because player behavior is something that can vary a lot (human input, random input, rule-based AI), and the Strategy design pattern is designed exactly for that situation. It also improves the design by following principles like Single Responsibility (player stores data, strategy handles decisions) and Open/Closed (we can add new strategies without modifying existing code) principles.
+\\\\\\
+
 \textbf{Explain the design pattern and elaborate on how it fosters cleaner design in this
 particular software.}
 
@@ -187,6 +194,12 @@ We had to do some planning to decide what logic would be in each strategy, but t
 \\
 
 \textbf{How much change was needed in the design and in the implementation?}
+
+The change required in the design was moderate, as we had to remove the inheritance-based structure (HumanPlayer and ComputerPlayer extends Player) and replace it where Player contains a TurnStrategy object instead. This required updating the UML diagram to introduce the strategy interface and its implementations, and modifying relationships between classes.
+
+Inside of the Player class, we had to refactor how turns are handled. Instead of calling something like takeTurn() directly on different player subclasses, we introduced a method like chooseCommand() in the Player class that delegates choosing the command to the strategy object instead of being directly in the Player. This meant moving input handling and AI logic out of the player classes into their respective strategy classes.
+
+Although we didn't implement this pattern in the code but rather only in the design, the changes would be fairly localized to player behavior and turn handling. Once the strategy structure is set up, the rest of the system (like TurnManager and Game) becomes simpler as it does not need to care if a player is human or a computer anymore to get the current action in their turn.
 
 \section{Roles and responsibilities}
 
