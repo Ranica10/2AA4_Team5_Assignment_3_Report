@@ -2,15 +2,43 @@
 
 \section{Requirements traceability}
 
-\begin{table}[h]
-    {\small
-    \begin{tabular}{@{}p{2cm}p{2cm}p{2cm}p{8cm}@{}}
-        \toprule
-        \multicolumn{1}{c}{\textbf{Req ID}} & \multicolumn{1}{c}{\textbf{Status}} & \multicolumn{1}{c}{\textbf{Implemented in}} & \multicolumn{1}{c}{\textbf{Design considerations}} \\
-        R1.1 & \{Missing, Partial, Implemented\} & \code{MapSetup.java} & The software sets up the same map by a hard-wired specification. The specification is given in the \code{MapSetup} class' \code{tiles} data structure and used in the \code{generateMap()} method at the initialization phase of the program. \\
-        ... & ... & ...  & ... \\ \bottomrule
-    \end{tabular}}
-\end{table}
+    \begin{longtable}{|p{0.80cm}|p{2.3cm}|p{5.1cm}|p{8cm}|}
+    \caption{Requirements Traceability Matrix} \\
+    \hline
+    \textbf{Req ID} & \textbf{Status} & \textbf{Classes} & \textbf{Design considerations} \\
+    \hline
+    \endfirsthead
+
+    
+    R3.1 & Implemented & \code{BuildCityCommand.java}, \code{BuildRoadCommand.java}, \code{BuildSettlementComman-\newline -d.java}, \newline \code{Command.java}, \code{CommandManager.java} & Implement an undo/redo functionality \\
+    \hline
+    R3.2 & Implemented & \code{AIAction.java}, \code{ConstraintChecker.java},
+    \code{ConstraintChecker.java},
+    \code{ActionEvalutor.java},
+    \code{RuleBasedAI.java},
+    \code{ComputerPlayer.java}
+    & Implement the Robber mechanism (see 4a in the rulebook) with the following simplifications. In case of rolling a 7, players may lose cards (if they have more than seven – see the rulebook), the Robber shall be placed on a random tile, and subsequently a qualifying player (i.e., one with a settlement or city adjacent to the robber’s new tile) shall be randomly chosen to pass a random card to the player who rolled 7.  
+    \begin{itemize}
+    \item {Earning a VP: 1.0.} 
+    \item {Building something without earning a VP (i.e., building a road or buying a development card): 0.8.} 
+	\item {Spending cards in a way that less than 5 cards remain in the agent’s hand: 0.5.} 
+\end{itemize} 
+\\
+    \hline
+    R3.3 & Implemented & \code{AIAction.java}, \code{ConstraintChecker.java},
+    \code{ConstraintChecker.java},
+    \code{ActionEvalutor.java},
+    \code{RuleBasedAI.java},
+    \code{ComputerPlayer.java} & Implement the following constraints. If any of these apply in a situation, the agent should first resolve that constraint before focusing on value-added actions. 
+    \begin{itemize}
+    \item {If there are more than 7 cards: the agent must spend them.}
+    \item {If there exist two road segments that are at most two units away, the agent should try to buy roads to connect the segments.} 
+	\item {If other players have a longest road that is at most one road shorter than the agent’s, the agent should buy a connected road segment. (For example, the agent has a longest road of 7, another has 6 → buy road..} 
+\end{itemize}
+\\
+    \hline
+\end{longtable}
+
 
 \section{Design pattern 1}
 
