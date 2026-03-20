@@ -40,9 +40,26 @@
 \end{longtable}
 
 
+\section{Getting ready for change}
+
+The following UML diagram represents the structure of our game system. It illustrates the main classes and the relationships between them.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{uml.png}
+    \caption{Design and domain modeling}
+    \label{fig:uml-design}
+\end{figure}
+\newpage
+
 \section{Design pattern 1}
 
 \textbf{Which design pattern did you choose and why?}
+
+We chose the Command Pattern because it lets us create each player action like building a road, city, or settlement as an object. This made it easy to support the undo and redo functionality, as each command can store the information needed to redo their actions. 
+
+Instead of calling methods like buildSettlement() in TurnManager, we made these actions into Command classes. It made the code simpler as they can be executed, undone, and redone. Furthermore, it improves scalability. If new actions need to be added in the future, they can be implemented as new command classes without changing existing code.
+\\
 
 \textbf{Explain the design pattern and elaborate on how it fosters cleaner design in this
 particular software.}
@@ -50,6 +67,15 @@ particular software.}
 \textbf{How much did you need to think about the structure of the evolved program once you have figured out which design pattern to use?}
 
 \textbf{How much change was needed in the design and in the implementation?}
+
+We made changes that were required in the design and implementation of the undo/redo functionality. Initially, player actions were handled in TurnManager. To apply Command Pattern, we had to refactor these action methods into separate command classes. 
+
+We also added a CommandManager class that would keep track of all executed commands and manage the undo/redo operations. This needed us to think about how the actions would be called during a player’s turn.
+
+In addition, we had to modify the Board and Player classes to help with undoing actions. We had to implement methods to remove buildings and roads and make sure that the player got those resources back.
+
+Although these changes required restructuring the code, the core logic of the game was the same. The changes improved the organisation of the code and helped make it easy to maintain.
+\\
 
 \section{Design Pattern 2}
 
@@ -131,7 +157,17 @@ Moderate changes were required:
 \textbf{Explain the design pattern and elaborate on how it fosters cleaner design in this
 particular software.}
 
+The strategy pattern lets us design the different ways players can take a turn, and lets us switch easily between them. We created a TurnStrategy interface, and different classes such as HumanTurnStrategy, RandomTurnStrategy, and RuleBasedStrategy to implement it.
+
+This makes the design better because instead of putting all the logic in Player, we move it to different Strategy classes. It makes the code clean and easier to understand, since every class has one responsibility. It also makes the code scalable, as we can easily add a new strategy without changing existing code. We can just add a new class that implements TurnStrategy.
+\\
+
 \textbf{How much did you need to think about the structure of the evolved program once you have figured out which design pattern to use?}
+
+After we decided to use the Strategy design pattern, we knew that all-turn related logic would be moved to separate classes, and the Player class would use them instead of having the logic itself. After that, we had to organize the classes correctly. We came up with an interface TurnStrategy, and made sure that all the strategy classes had the chooseCommand method. We also had to update the Player class to have a reference to a strategy and call it in a turn. 
+
+We had to do some planning to decide what logic would be in each strategy, but the pattern helped us to make that decision. This made it easy to implement new features, like when implementing the machine AI requirement.
+\\
 
 \textbf{How much change was needed in the design and in the implementation?}
 
