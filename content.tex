@@ -51,16 +51,78 @@ particular software.}
 
 \textbf{How much change was needed in the design and in the implementation?}
 
-\section{Design pattern 2}
+\section{Design Pattern 2}
 
 \textbf{Which design pattern did you choose and why?}
+
+We chose the Observer Pattern for handling dice roll notifications in the Catan game. 
+In Catan, when dice are rolled, multiple tiles need to react by producing resources.
+This creates a one to many dependency: one MultiDice object and many Tile objects.
+The Observer pattern perfectly captures this relationship where when one object changes state, all its dependents are automatically notified and updated.
+It decouples the dice from the tiles, the dice doesn't need to know which tiles exist or how they produce resources. 
 
 \textbf{Explain the design pattern and elaborate on how it fosters cleaner design in this
 particular software.}
 
-\textbf{How much did you need to think about the structure of the evolved program once you have figured out which design pattern to use?}
+The Observer Pattern defines a one to many dependency between objects so that when one object changes state, all its dependents are notified and updated.
+
+\begin{itemize}
+    \item Subject: DiceRollSubject abstract class extends MultiDice
+    \item Observer: DiceRollObserver interface implemented by Tile
+    \item Notification: When MultiDice.roll() is called, it calls notifyObservers(diceValue)
+\end{itemize}
+
+\textbf{Cleaner design:}
+\begin{itemize}
+    \item Loose Coupling: MultiDice doesn’t need to know anything about Tile, it just knows it has observers. Tiles can be added or removed without modifying the dice class (but in this game we don't need to remove the tile). New observer types could be added later that require dice roll. 
+    \item Open/Closed Principle: We can add new observers without modifying the subject. The system is open for extension but closed for modification. 
+    \item Single Responsibility: MultiDice only handles rolling dice and notification. Tile only handles resource production logic. Board class only handles building logics. Each class had one reason to change. 
+    \item Simplified Communication: Without Observer, we would need to manually call each tile’s method after every dice roll. The pattern automates this communication. 
+    \item Tiles register themselves with dice at runtime in Board.registerTileWithDice(). We could add or remove tiles if needed. 
+\end{itemize}
+
+
+
+\textbf{How much did you need to think about the structure of the evolved program once
+you have figured out which design pattern to use?}
+
+Moderate thought was needed: 
+
+\begin{itemize}
+    \item Initial Analysis: 
+    \begin{itemize}
+        \item We identified that dice rolls affect multiple tiles.
+        \item We realized that is a classical observer scenario.
+        \item We decided on the observer pattern after some discussion.
+    \end{itemize}
+
+    \item Planning: 
+    \begin{itemize}
+        \item We determined what should be the subject (MultiDice), observer (Tile) and notification method (onDiceRolled(int diceValue). 
+        \item In this case Board class was the best choice for registration as it has references to Tile, robber and other classes needed. 
+    \end{itemize}
+
+    \item Other: 
+    \begin{itemize}
+        \item We had to consider how the robber blocks production (Dice == 7). 
+        \item Needed to pass dependencies to tiles ( like robber, logger)  and ensured tiles only produce when their token matches the dice value.
+    \end{itemize}
+\end{itemize}
 
 \textbf{How much change was needed in the design and in the implementation?}
+
+Moderate changes were required: 
+
+\begin{itemize}
+    \item Added new classes: DiceRollSubject (abstract class), DiceRollObserver (interface) 
+    
+    \item Modified existing classes: 
+    \begin{itemize}
+        \item MultiDice: added extending DiceRollSubject, and in roll method notifyObserver(sum) is called. 
+        \item Tile: Added implements  DiceRollObserver and implements onDiceRolled() , distributedResources(), distributeResourceToPlayer(), and shouldSkipTile().
+        \item Board: Added registerTileWithDice() method and removed all resource production methods that previously existed (Relocating these methods to Tile class).
+    \end{itemize}
+\end{itemize}
 
 \section{Design pattern 3}
 
